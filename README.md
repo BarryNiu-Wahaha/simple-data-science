@@ -1,4 +1,6 @@
-# My Agent Skills
+# simple-data-science
+
+A lightweight agent skill for writing clear, simple, and reproducible data science code in Python, pandas, NumPy, and scikit-learn.
 
 A small collection starting with one self-contained skill: **readable-data-science**.
 
@@ -9,6 +11,11 @@ It combines code simplification with a compact exploratory-analysis workflow ada
 ## Use in Codex
 
 Ask Codex to install `skills/readable-data-science` from this repository using its skill installer. You can also copy the entire `skills/readable-data-science` directory into your personal skills directory. Keep the included LICENSE with the skill.
+
+```text
+Use $skill-installer to install skills/readable-data-science from
+https://github.com/BarryNiu-Wahaha/simple-data-science
+```
 
 Then invoke it explicitly:
 
