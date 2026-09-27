@@ -5,7 +5,7 @@ description: Use when writing, reviewing, or simplifying Python data science cod
 
 # Readable Data Science
 
-Write code a junior data analyst can follow. Optimize for comprehension, not minimum line count. Adapted from Addy Osmani's code-simplification skill; see [LICENSE](LICENSE).
+Write code a junior data analyst can follow. Optimize for comprehension, not minimum line count. Combines Addy Osmani's code-simplification guidance with selected principles from K-Dense's exploratory-data-analysis skill; see [LICENSE](LICENSE).
 
 ## Working approach
 
@@ -13,6 +13,17 @@ Write code a junior data analyst can follow. Optimize for comprehension, not min
 2. For new code, choose the simplest approach that meets the requirements. For cleanup, understand inputs, outputs, side effects, and edge cases before changing anything.
 3. Keep edits within the requested scope. Preserve behavior during refactoring; report statistical bugs separately instead of silently changing the analysis.
 4. Verify relevant results using existing checks or a small representative comparison. Explain what changed and any checks you could not run.
+
+## Lightweight exploratory analysis
+
+Apply these checks when exploring data or developing an analysis; a naming-only cleanup does not need a fresh EDA report.
+
+- Establish the question, what one row represents, units, data origin, and repeated-subject or time structure. State unknowns that affect interpretation.
+- Inspect relevant types, ranges, missingness, duplicates, and distributions. Distinguish missing observations from true zeros. State whether inspection covers the full dataset or a sample.
+- Keep raw inputs unchanged. Explain cleaning choices and write derived data separately when needed.
+- Compare mean/standard deviation with median/interquartile range where skew or extremes matter. Investigate outliers and their influence before deciding whether treatment is justified.
+- Treat discovered relationships as exploratory associations. Account for repeated observations; report uncertainty and limitations rather than implying causality.
+- Return a brief account of relevant findings, data-quality issues, and next steps. Scale plots and checks to the question rather than generating an exhaustive report.
 
 ## Python and data transformations
 
@@ -53,3 +64,5 @@ Keep the original aggregation and missing-value semantics when applying this pat
 ## Attribution
 
 Adapted from [code-simplification](https://github.com/addyosmani/agent-skills/blob/main/skills/code-simplification/SKILL.md), copyright (c) 2025 Addy Osmani, under the MIT License. The original credits Anthropic's Code Simplifier as inspiration. This variation adds data science guidance and removes frontend-specific examples and heavyweight refactoring procedures.
+
+EDA principles adapted from K-Dense Inc.'s [exploratory-data-analysis](https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/exploratory-data-analysis), version 1.2, reviewed 2026-09-26, MIT licensed. This is a selective adaptation; upstream scripts, format inspectors, and dependencies are not bundled.
